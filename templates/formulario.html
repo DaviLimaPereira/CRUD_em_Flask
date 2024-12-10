@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Formulário Flask {% endblock titulo %}
+
+{% block conteudo %}
+    <h1>Formulário</h1>
+    <form method="POST" action="/enviar">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="mensagem">Registro Funcional:</label>
+        <input type="text" id="registro_funcional" name="registro_funcional"><br>
+        <label for="mensagem">Cargo:</label>
+        <input type="text" id="cargo" name="cargo"><br>
+        <label for="mensagem">Secretaria:</label>
+        <input type="text" id="secretaria" name="secretaria"><br>
+        <label for="mensagem">Setor:</label>
+        <input type="text" id="setor" name="setor"><br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <a href="{{ url_for('listar') }}">Listar</a>
+
+{% endblock conteudo %}
